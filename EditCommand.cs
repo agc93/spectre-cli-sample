@@ -1,10 +1,11 @@
+using System.Linq;
 using Spectre.CommandLine;
 
 namespace spectretest
 {
     public class EditCommand : Command<EditCommand.EditCommandSettings>
     {
-        public override int Run(EditCommandSettings settings)
+        public override int Execute(EditCommandSettings settings, ILookup<string, string> remaining)
         {
             return 0;
         }

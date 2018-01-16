@@ -1,10 +1,11 @@
+using System.Linq;
 using Spectre.CommandLine;
 
 namespace spectretest
 {
     public class DeleteCommand : Command<DeleteCommand.DeleteCommandSettings>
     {
-        public override int Run(DeleteCommandSettings settings)
+        public override int Execute(DeleteCommandSettings settings, ILookup<string, string> remaining)
         {
             return 0;
         }
