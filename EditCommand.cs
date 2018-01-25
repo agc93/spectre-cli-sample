@@ -12,8 +12,9 @@ namespace spectretest
 
         public class EditCommandSettings : SharedCommandSettings
         {
-            //this should inherit the SharedCommandSettings.FilePath argument
-            // it currently doesn't (i.e. it's not required and doesn't appear in help)
+            // given the explicit 0 here, I would have expected it to appear BEFORE the <PATH> argument
+            [CommandArgument(0, "<NAME>")]
+            public string Name { get; set; }
         }
     }
 }

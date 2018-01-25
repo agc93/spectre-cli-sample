@@ -4,27 +4,10 @@ From this project, running for example:
 dotnet run -- proxy edit -h
 ```
 
-should result in the help including `<PATH>` (from `SharedCommandSettings`) but this isn't the case.
+should result in the argument order being:
 
-Very strangely if you change the structure from:
-
-```
-SharedCommandSettings
-    |
-    v
-CreateCommandSettings
+```bash
+spectretest proxy edit <NAME> <PATH>
 ```
 
-to this insteadL
-
-```
-ProxyCommandSettings <- update Program.cs (this can be empty)
-    |
-    v
-SharedCommandSettings <- Keep the argument here
-    |
-    v
-CreateCommandSettings
-```
-
-the arguments magically show up in help again
+but it's currently showing in reverse.

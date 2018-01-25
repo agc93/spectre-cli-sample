@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Spectre.CommandLine" Version="0.7.0" />
+    <PackageReference Include="Spectre.CommandLine" Version="0.8.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ProjectReference Include="../spectre.commandline/src/Spectre.CommandLine/Spectre.CommandLine.csproj" /> -->
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ namespace spectretest
             var app = new CommandApp();
             app.Configure(config =>
             {
-                config.AddCommand<SharedCommandSettings>("proxy", c =>
+                config.AddCommand<ProxySettings>("proxy", c =>
                 {
                     c.AddCommand<EditCommand>("edit");
                     c.AddCommand<DeleteCommand>("delete");

@@ -2,12 +2,11 @@ using Spectre.CommandLine;
 
 namespace spectretest
 {
-    public class SharedCommandSettings
+    public class ProxySettings {}
+    public class SharedCommandSettings : ProxySettings
     {
-        // this type however serves as a container of shared arguments and options
-        // these options might be shared by most but not all commands, for example
-        // this argument *does not* show up in help
-        [CommandArgument(0, "<PATH>")]
+        // Given the 1 here, we expect this command to come after any 0-position arguments
+        [CommandArgument(1, "<PATH>")]
         public string FilePath { get; set; }
     }
 }
